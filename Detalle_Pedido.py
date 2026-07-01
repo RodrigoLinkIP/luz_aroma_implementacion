@@ -1,4 +1,4 @@
-
+from producto import *
 
 class DetallePedido:
     """Representa una línea de un pedido: un producto y su cantidad."""

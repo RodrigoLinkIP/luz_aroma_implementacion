@@ -1,3 +1,5 @@
+from producto import *
+
 class Catalogo:
 
     def __init__(self):
