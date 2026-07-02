@@ -1,4 +1,4 @@
-from luz_aroma_implementacion.Cliente import Cliente
+from Cliente import Cliente
 
 
 class RegistroCliente:
@@ -17,3 +17,12 @@ class RegistroCliente:
 
     def listar_clientes(self) -> list[Cliente]:
         return list(self._clientes)
+
+    def eliminar_cliente(self, dui: str) -> bool:
+        cliente = self.buscar_cliente(dui)
+
+        if cliente is None:
+            return False
+
+        self._clientes.remove(cliente)
+        return True

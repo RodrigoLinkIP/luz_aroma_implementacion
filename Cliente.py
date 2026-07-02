@@ -13,3 +13,6 @@ class Cliente:
         self.telefono = telefono
         self.direccion = direccion
         self.referencia = referencia
+
+    def __str__(self):
+        return f"{self.nombre} ({self.dui})"
