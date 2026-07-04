@@ -39,3 +39,18 @@ def listar_datos(lista: list):
         
 def agregar_lista(lista: list, objeto):
     lista.append(objeto)
+    
+def eliminar_objeto(lista: list, objeto):
+    lista.remove(objeto)
+    
+def verificar_existencia_objeto(lista: list, objeto) -> bool:
+    for dato in lista:
+        if dato == objeto:
+            return True
+    return False
+
+def buscar_objeto(lista: list, identificador: str, valor):
+    for dato in lista:
+        if getattr(dato, identificador) == valor:
+            return dato
+    return None
